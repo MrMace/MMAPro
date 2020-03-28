@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>My Style Guide</title>
+<script href=" https://kit.fontawesome.com/9cf19d0093.js" crossorigin="anonymous">
+</script>
+  </head>
+<body>
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro&display=swap');
+
+body {
+  font-family: 'Maven Pro', sans-serif;
+  color: White;
+  background-color: #2d3436;
+background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+}
+
+a {
+/*   color:#D3B7D8; */
+  color:#c373f2;
+}
+
+a:hover {
+/*   color:#A13E97; */
+      color: #f977ce;
+
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: semi;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+
+div.box {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  margin: 0 10px 0 10px;
+}
+
+#primary1 {
+/*   background-color: #D3B7D8;
+  border-style: solid;
+  border-color: #D3B7D8; */
+  background-color: #ffffff;
+background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+
+}
+.box {
+  text-align:center;
+  vertical-align:middle;
+  line-height: 90px;
+
+}
+
+
+#primary2 {
+/*   background-color: #A13E97;
+  border-style: solid;
+  border-color: #A90A97; */
+  background-color: #f977ce;
+background-image: linear-gradient(315deg, #f977ce 0%, #c373f2 74%);
+}
+
+#primary3 {
+background-color: #6c33a3;
+background-image: linear-gradient(316deg, #6c33a3 0%, #8241b8 74%);
+/*   border-style: solid; */
+/*   border-color: #632A8A; */
+}
+#primary4 {
+/*   background-color: #1e1f26; */
+/*   border-style: solid; */
+/*   border-color: #262E3D; */
+ background-color: #2d3436;
+background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+}
+
+form {
+  padding: 20px 0;
+  position: relative;
+  z-index: 2;
+}
+
+
+form input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin:10px;
+  outline: 0;
+/*   border: 1px solid #3C3B6E; */
+/*   background-color: rgba(211, 183, 216, 0.95); */
+ background-color: #ffffff;
+background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  width: 250px;
+  border-radius: 4px;
+  padding: 10px 15px;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: #FFF;
+  transition-duration: 0.25s;
+  font-weight: 300;
+}
+form input:hover {
+  transform: scale(1.02);
+  background-color: rgba(255, 255, 255, .95);
+}
+form input:focus {
+  background-color: white;
+  width: 300px;
+  color: #070C0F;
+}
+button {
+  margin-left:10px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+/*   background-color: #632A7E; */
+  background-color: #6c33a3;
+background-image: linear-gradient(316deg, #6c33a3 0%, #8241b8 74%);
+  border: 0;
+  padding: 10px 15px;
+  color: #F1EBDE;
+  border-radius: 3px;
+  width: 150px;
+  cursor: pointer;
+  font-size: 18px;
+  transition-duration: 0.25s;
+}
+button:hover {
+  transform: scale(1.1);
+    background-color: #f977ce;
+background-image: linear-gradient(315deg, #f977ce 0%, #c373f2 74%);
+/*   background-color: #A13E97; */
+}
+
+.warning {
+/*   background-color: #F0A202; */
+  background-color: #fbb034;
+background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+  font-weight: bold;
+  color:white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.danger {
+/*   background-color: #A31621; */
+background-color: #eb4511;
+background-image: linear-gradient(315deg, #eb4511 0%, #b02e0c 74%);
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.success {
+    background-color: #f977ce;
+background-image: linear-gradient(315deg, #f977ce 0%, #c373f2 74%);
+/*   background-color: #A13E97; */
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+svg.svg-inline--fa {
+  color: white;
+}
+
+.spacer {
+  margin-top: 25px;
+}
+
+#footer {
+  border-top: 1px solid #dddddd;
+  margin-top: 50px;
+  padding: 10px;
+  text-align: center;
+}
+
+
+</style>
+  <a name="Top"></a>
+  <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="#">
+                    <span class="navbar-brand">
+                        <i class="fas fa-home"></i>My Interface Style Guide</span>
+                </a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="col-md-3">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <a href="#font">Font</a>
+        </li>
+        <li class="list-group-item">
+          <a href="#colorTheme">Color Theme</a>
+        </li>
+        <li class="list-group-item">
+          <a href="#headings">Headings</a>
+        </li>
+        <li class="list-group-item">
+          <a href="#buttons">Buttons</a>
+        </li>
+        <li class="list-group-item">
+          <a href="#formElements">Form Elements</a>
+        </li>
+        <li class="list-group-item">
+          <a href="#messages">Messages</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-9">
+      <!-- About -->
+      <div>
+        <div class="page-header">
+          <h1>
+            <a name="about"></a>My Styles</h1>
+        </div>
+        <p>This page contains specific style guide information for my front end interface.</p>
+      </div>
+      <!-- End About -->
+
+      <!-- Fonts -->
+      <div>
+        <div class="page-header">
+          <h1>
+            <a name="fonts"></a>Font</h1>
+        </div>
+        <p>My application utilizes the font-family: 'Maven Pro', sans-serif; font-family with blackish() text.</p>
+      </div>
+      <div class="spacer">
+        <a href="#Top">Back to Top</a>
+      </div>
+      <!-- End Fonts -->
+
+      <!-- Color Theme -->
+      <div>
+        <div class="page-header">
+          <h1>
+            <a name="colorTheme"></a>Color Theme</h1>
+        </div>
+        <p>My application incorporates the below color scheme in its interface. ALL are gradent base</p>
+        <div class="box" id="primary1">#fff</div>
+        <div class="box" id="primary2">#f977ce</div>
+        <div class="box" id="primary3">#6c33a3</div>
+        <div class="box" id="primary4"> #2d3436</div>
+      </div>
+      <div class="spacer">
+        <a href="#Top">Back to Top</a>
+      </div>
+      <!-- End Color Theme -->
+
+      <!-- Headings -->
+      <div>
+        <div class="page-header">
+          <h1>
+            <a name="headings"></a>Headings</h1>
+        </div>
+        <p>The below font sizes and styles are used in the application for various content headings.</p>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+      </div>
+      <div class="spacer">
+        <a href="#Top">Back to Top</a>
+      </div>
+      <!-- End Headings -->
+
+      <!-- Buttons -->
+      <div>
+        <div class="page-header">
+          <h1>
+            <a name="buttons"></a>Buttons</h1>
+        </div>
+        <p>The application will feature buttons that contain the below color and shape:</p>
+        <button>My Button</button>
+      </div>
+      <div class="spacer">
+        <a href="#Top">Back to Top</a>
+      </div>
+      <!-- End Buttons -->
+
+      <!-- Form Elements -->
+      <div>
+        <div class="page-header">
+          <h1>
+            <a name="formElements"></a>Form Elements</h1>
+        </div>
+        <p>For the varous forms that the application will contain, it will contain input fields with the below styling:</p>
+        <form>
+          <input type="text" id="name" placeholder="Name" class="inputField" value="">
+        </form>
+      </div>
+      <div class="spacer">
+        <a href="#Top">Back to Top</a>
+      </div>
+      <!-- End Form Elements -->
+
+      <!-- User Messages -->
+      <div>
+        <div class="page-header">
+          <h1>
+            <a name="messages"></a>Messages</h1>
+        </div>
+        <p>For various completed tasks, application notifications will be presented to the user based. The following contextual messages will be used.</p>
+        <p class="warning">Warning!</p>
+        <p class="danger">Danger!</p>
+        <p class="success">Success!</p>
+      </div>
+      <div class="spacer">
+        <a href="#Top">Back to Top</a>
+      </div>
+      <!-- End User Messages -->
+    </div>
+  </div>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">Copyright My Style Guide</p>
+    </div>
+  </div>
+</body>
+</html>
