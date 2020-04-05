@@ -1,9 +1,18 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>about</ion-title>
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+       ABOUT
+      </ion-title>
+      <ion-buttons slot="start">
+        <app-backbutton color="dark"></app-backbutton>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+
+  <app-loading *ngIf="isLoading"></app-loading>
+
+  <div *ngIf="!isLoading" [innerHTML]="aboutus"></div>
 
 </ion-content>

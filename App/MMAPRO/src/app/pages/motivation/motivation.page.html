@@ -1,9 +1,26 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>motivation</ion-title>
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+        Quotes
+      </ion-title>
+      <ion-buttons slot="start">
+          <!-- <app-backbutton color="dark"></app-backbutton> -->
+        </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+
+<ion-content class="ion-padding">
+
+
+
+<ion-slides  mode="ios">
+    <ion-slide class="slide" >
+      <ion-card mode="ios" class="card">
+        <ion-icon name="md-quote"></ion-icon>
+        <h1>Quote Title</h1>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
 
 </ion-content>

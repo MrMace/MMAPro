@@ -1,9 +1,56 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>diets</ion-title>
+
+<ion-header class="darkheader" mode="ios" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+          Recipes
+        </ion-title>
+      <ion-buttons slot="start">
+        <!-- <app-backbutton color="light"></app-backbutton> -->
+      </ion-buttons>
+      <ion-buttons slot="end">
+          <ion-button [routerLink]="['/categories']">
+            <ion-icon mode="md" name="md-search" slot="end">
+            </ion-icon>
+          </ion-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+
+<ion-content class="ion-no-padding">
+
+
+<ion-slides mode="ios">
+  <ion-slide>
+    <div class="card" >
+      <div class="overlay">
+      <div class="texts">
+      <p>Category TItle</p>
+      <h1>Recipe Title</h1>
+      </div>
+    </div>
+    </div>
+  </ion-slide>
+</ion-slides>
+
+<ion-list style="margin: 0; padding: 0;">
+    <ion-list-header color="primary">
+      <ion-label style="font-weight: bold; letter-spacing: 0;">Categories</ion-label>
+    </ion-list-header>
+  </ion-list>
+
+<ion-grid>
+ <ion-row>
+   <ion-col size="6">
+      <div class="cardcategory">
+          <div class="overlay">
+          <div class="texts">
+          <h1>Category Title</h1>
+          </div>
+        </div>
+        </div>
+   </ion-col>
+ </ion-row>
+</ion-grid>
 
 </ion-content>

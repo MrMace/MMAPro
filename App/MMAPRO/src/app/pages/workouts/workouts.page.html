@@ -1,9 +1,45 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>workouts</ion-title>
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+        Workouts
+      </ion-title>
+            <ion-buttons slot="start">
+              <!-- <app-backbutton color="dark"></app-backbutton> -->
+            </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fixed>
+
+    <ion-grid>
+      
+        <ion-row>
+          <ion-col [routerLink]="['/goals']">
+            <div class="card-center-image" style="background-image: url('./assets/images/goals.jpeg');">
+              <div class="card-center-bg">
+                <div class="card-center-text">
+                <p class="title">GOALS</p>
+                <p class="subtitle">Workouts For Goals</p>
+              </div>
+              </div>
+            </div>
+            
+          </ion-col>
+        </ion-row>
+      
+        <ion-row>
+            <ion-col [routerLink]="['/levels']">
+                <div class="card-center-image" style="background-image: url('./assets/images/levels.jpeg');">
+                    <div class="card-center-bg">
+                      <div class="card-center-text">
+                          <p class="title">Levels</p>
+                          <p class="subtitle">Skill Level Workouts</p>
+                    </div>
+                    </div>
+                  </div>
+            </ion-col>
+          </ion-row>
+
+      </ion-grid>
 
 </ion-content>
