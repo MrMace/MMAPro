@@ -1,9 +1,27 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>ebodyparts</ion-title>
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+        BodyPart
+      </ion-title>
+            <ion-buttons slot="start">
+              <ion-back-button color="dark"></ion-back-button>
+            </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  
+  <app-empty></app-empty>
+
+  <ion-list lines="none" class="ion-padding-top">
+
+  <ion-item *ngFor="let item of exercises" [routerLink]="['/edetails', item.exercise_id]">
+      <ion-avatar slot="start">
+        <img [src]="item.exercise_image | image">
+      </ion-avatar>
+      <ion-label>Exercise Title</ion-label>
+    </ion-item>
+
+  </ion-list>
 
 </ion-content>

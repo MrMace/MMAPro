@@ -1,9 +1,30 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>eequipments</ion-title>
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+        Title
+      </ion-title>
+            <ion-buttons slot="start">
+              <ion-back-button color="dark"></ion-back-button>
+            </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
+  
+  <app-loading ></app-loading>
+
+  <app-empty></app-empty>
+
+  <ion-list lines="none" class="ion-padding-top">
+
+  <ion-item >
+      <ion-avatar slot="start">
+        <img >
+      </ion-avatar>
+      <ion-label>Exercise Title</ion-label>
+    </ion-item>
+
+  </ion-list>
 
 </ion-content>
