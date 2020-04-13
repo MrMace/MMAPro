@@ -1,9 +1,55 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>pdetails</ion-title>
+<ion-header class="darkheader" mode="ios" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+          Post Details
+        </ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button color="light"></ion-back-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+              <ion-button  slot="start">
+              <ion-icon color="light" mode="md" [name]="icon"></ion-icon>
+              </ion-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-no-padding">
+
+    <app-loading *ngIf="isLoading"></app-loading>
+
+    <ion-grid class="ion-no-padding">
+        <ion-row class="header-bg" [ngStyle]="{'height': innerHeight}">
+          <div class="text">
+          <p class="time">Tag Title</p>
+          <p class="name">Post TItle}</p>
+          <app-postrating color="rgba(255, 255, 255, 0.3)" [size]="18"></app-postrating>
+        </div>
+    </ion-row>
+    </ion-grid>
+
+    <ion-grid class="ion-no-padding">
+        <ion-row class="cols">
+            <ion-col size="6"  class="col-text ion-justify-content-start">
+                  Comments 23
+            </ion-col>
+
+            <ion-col size="6"  class="col-text ion-justify-content-end">
+                Add Comment
+                <ion-icon name="ios-add-circle"></ion-icon>
+            </ion-col>
+
+        </ion-row>
+      </ion-grid>
+
+      <div class="ion-padding">
+      <!-- <app-html ></app-html> -->
+      </div>
+
+  <div class="date-category">
+      <p><ion-icon name="md-calendar"></ion-icon> Date posted</p>
+      <p><ion-icon name="md-folder-open"></ion-icon> Post Tag Title</p>
+  </div>
+
 
 </ion-content>
