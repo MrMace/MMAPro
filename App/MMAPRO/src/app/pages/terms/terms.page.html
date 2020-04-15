@@ -1,9 +1,21 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>terms</ion-title>
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+        Terms
+      </ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button color="dark"></ion-back-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+
+  <app-loading *ngIf="isLoading"></app-loading>
+  
+  <div *ngIf="!isLoading">
+  <div class="html" [innerHTML]="privacypolicy"></div>
+  <div class="html" [innerHTML]="termsofservice"></div>
+  </div>
 
 </ion-content>

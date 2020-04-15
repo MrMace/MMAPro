@@ -1,9 +1,25 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>termsguest</ion-title>
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+       Terms
+      </ion-title>
+      <ion-buttons slot="start">
+          <ion-buttons slot="start">
+            <ion-button color="dark" mode="md" (click)="goClosePage()" slot="start">
+              <ion-icon name="md-arrow-back"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding" fixed>
+
+  <app-loading *ngIf="isLoading"></app-loading>
+  
+  <div *ngIf="!isLoading">
+  <div [innerHTML]="privacypolicy"></div>
+  <div [innerHTML]="termsofservice"></div>
+  </div>
 
 </ion-content>
