@@ -1,9 +1,28 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>weday</ion-title>
+<ion-header class="lightheader" no-border>
+  <ion-toolbar mode="ios">
+      <ion-title class="ion-text-capitalize">
+        Day 
+      </ion-title>
+            <ion-buttons slot="start">
+              <ion-back-button color="dark"></ion-back-button>
+            </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+
+<app-restday ></app-restday>
+
+  <ion-list lines="none" class="ion-padding-top">
+
+  <ion-item   style="margin-bottom: 5px;">
+      <ion-avatar slot="start">
+        <img [src]="item.exercise_image | image">
+      </ion-avatar>
+      <ion-label>Exercise Title</ion-label>
+    </ion-item>
+
+  </ion-list>
 
 </ion-content>
