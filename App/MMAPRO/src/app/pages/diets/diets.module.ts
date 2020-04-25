@@ -7,12 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { DietsPageRoutingModule } from './diets-routing.module';
 
 import { DietsPage } from './diets.page';
+import { ComponentsModule } from '../../components/components.module';
+import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
+    PipesModule,
     DietsPageRoutingModule
   ],
   declarations: [DietsPage]

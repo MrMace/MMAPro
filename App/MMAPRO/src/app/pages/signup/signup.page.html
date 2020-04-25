@@ -1,7 +1,7 @@
 <ion-header class="lightheader" no-border>
   <ion-toolbar mode="ios">
       <ion-title class="ion-text-capitalize">
-        Sign Up
+        {{strings.ST27}}
       </ion-title>
           <ion-buttons slot="start">
             <ion-button color="dark" mode="md" (click)="goClosePage()" slot="start">
@@ -41,12 +41,12 @@
                   </ion-item> 
                 </ion-list>
             <ion-button class="button-h" mode="ios" type="submit" [disabled]="!validationsform.valid" color="primary" fill="solid" size="default" shape="round" expand="block">
-              Submit
+              {{strings.ST28}}
             </ion-button>
           </form>
 
           <p class="go-to-terms">
-              <a (click)="goTermsPage()">Terms</a>
+              <a (click)="goTermsPage()">{{strings.ST82}}</a>
           </p>
   
       </ion-col>

@@ -1,29 +1,29 @@
 <ion-header class="lightheader" no-border>
-  <ion-toolbar mode="ios">
-      <ion-title class="ion-text-capitalize">
-        BMI Info
-      </ion-title>
-      <ion-buttons slot="start">
-          <ion-back-button color="dark"></ion-back-button>
-        </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar mode="ios">
+        <ion-title class="ion-text-capitalize">
+          {{strings.ST116}}
+        </ion-title>
+        <ion-buttons slot="start">
+            <app-backbutton color="dark"></app-backbutton>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content>
 
 <ion-grid fixed>
-<ion-row class="ion-align-items-stretch">
-  <ion-col size="8">
-    <div class="bg1">
-        Lorem ipsum
-    </div>
-  </ion-col>
-  <ion-col size="4">
-      <div class="bg2" [ngStyle]="{'background-color': item.color}">
-        Number goes here
+  <ion-row class="ion-align-items-stretch" *ngFor="let item of data">
+    <ion-col size="8">
+      <div class="bg1">
+          {{item.text}}
       </div>
-  </ion-col>
-</ion-row>
+    </ion-col>
+    <ion-col size="4">
+        <div class="bg2" [ngStyle]="{'background-color': item.color}">
+            {{item.number}}
+        </div>
+    </ion-col>
+  </ion-row>
 </ion-grid>
 
 </ion-content>

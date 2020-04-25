@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Platform } from '@ionic/angular';
+import { strings } from '../../config/strings';
+import { MuscleObject } from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-ebodyparts',
@@ -7,9 +12,57 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EbodypartsPage implements OnInit {
 
-  constructor() { }
+  public strings = strings;
+  exercises: MuscleObject[] = [];
+  title: string;
+  isLoading = false;
+  id: any;
+  height: any;
 
-  ngOnInit() {
-  }
+  constructor(
+    private dataService: DataService,
+    private router: Router,
+    private route: ActivatedRoute,
+    public plt: Platform,
+
+    ) {}
+
+    ngOnInit() {
+    }
+
+    // tslint:disable-next-line: use-lifecycle-interface
+    ngOnDestroy() {
+    }
+
+    async ionViewWillEnter() {
+      this.isLoading = true;
+      this.route.params.subscribe(
+        data => {
+          this.id = data.id;
+          this.title = data.title;
+          this.getExercises();
+
+          if (!this.id) {
+            this.goBack();
+          }
+        }
+      );
+    }
+
+    goBack() {
+      this.router.navigate(['/home']);
+    }
+
+  getExercises() {
+
+    this.dataService.getDataExercisesByBodypart(this.id)
+    .subscribe( resp => {
+
+      this.exercises = resp;
+
+      this.isLoading = false;
+
+  } );
+}
 
 }

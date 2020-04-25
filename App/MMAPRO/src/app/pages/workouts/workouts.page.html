@@ -1,10 +1,10 @@
 <ion-header class="lightheader" no-border>
   <ion-toolbar mode="ios">
       <ion-title class="ion-text-capitalize">
-        Workouts
+        {{strings.ST1}}
       </ion-title>
             <ion-buttons slot="start">
-              <!-- <app-backbutton color="dark"></app-backbutton> -->
+              <app-backbutton color="dark"></app-backbutton>
             </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -15,11 +15,10 @@
       
         <ion-row>
           <ion-col [routerLink]="['/goals']">
-            <div class="card-center-image" style="background-image: url('./assets/images/goals.jpeg');">
+            <div class="card-center-image" style="background-image: url('./assets/images/default.png');">
               <div class="card-center-bg">
                 <div class="card-center-text">
-                <p class="title">GOALS</p>
-                <p class="subtitle">Workouts For Goals</p>
+                <p class="title">{{strings.ST10}}</p>
               </div>
               </div>
             </div>
@@ -29,11 +28,10 @@
       
         <ion-row>
             <ion-col [routerLink]="['/levels']">
-                <div class="card-center-image" style="background-image: url('./assets/images/levels.jpeg');">
+                <div class="card-center-image" style="background-image: url('./assets/images/default.png');">
                     <div class="card-center-bg">
                       <div class="card-center-text">
-                          <p class="title">Levels</p>
-                          <p class="subtitle">Skill Level Workouts</p>
+                          <p class="title">{{strings.ST11}}</p>
                     </div>
                     </div>
                   </div>

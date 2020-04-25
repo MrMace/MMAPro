@@ -7,12 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { BmiinfoPageRoutingModule } from './bmiinfo-routing.module';
 
 import { BmiinfoPage } from './bmiinfo.page';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
     BmiinfoPageRoutingModule
   ],
   declarations: [BmiinfoPage]

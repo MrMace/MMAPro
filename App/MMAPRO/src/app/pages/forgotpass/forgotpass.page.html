@@ -1,7 +1,7 @@
 <ion-header class="lightheader" no-border>
   <ion-toolbar mode="ios">
       <ion-title class="ion-text-capitalize">
-       Forgot Password
+        {{strings.ST29}}
       </ion-title>
           <ion-buttons slot="start">
             <ion-button color="dark" mode="md" (click)="goClosePage()" slot="start">
@@ -27,12 +27,12 @@
                 </ion-item> 
               </ion-list>
             <ion-button class="button-h" mode="ios" type="submit" [disabled]="!validationsform.valid" color="primary" fill="solid" size="default" shape="round" expand="block">
-              Submit
+              {{strings.ST28}}
             </ion-button>
           </form>
 
           <p class="go-to-restpass">
-              <a (click)="goClosePage()">Back to Login</a>
+              <a (click)="goClosePage()">{{strings.ST35}}</a>
             </p>
   
       </ion-col>

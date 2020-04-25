@@ -1,61 +1,60 @@
 <ion-header class="darkheader" mode="ios" no-border>
-  <ion-toolbar mode="ios">
-      <ion-title class="ion-text-capitalize">
-          Calculator
-        </ion-title>
-      <ion-buttons slot="start">
-          <ion-back-button color="light"></ion-back-button>
-      </ion-buttons>
-      <ion-buttons slot="end">
-        <ion-icon mode="md" name="md-information-circle-outline"  slot="end">
-        </ion-icon>
-      </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar mode="ios">
+        <ion-title class="ion-text-capitalize">
+            {{strings.ST105}}
+          </ion-title>
+        <ion-buttons slot="start">
+            <app-backbutton color="light"></app-backbutton>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-icon mode="md" name="md-information-circle-outline" [routerLink]="'/bmiinfo'" slot="end">
+          </ion-icon>
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content class="ion-no-padding">
 
-<ion-grid class="ion-no-padding">
-  <ion-row>
-    <ion-col size="12" class="col1" [ngStyle]="{'background-color': color}">
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12" class="col1" [ngStyle]="{'background-color': color}">
 
-      <div class="image">
-        <img [src]="icon">
-      </div>
-
-      <p class="name">{{resultText}}</p>
-
-        <div class="circle">
-            <p class="number">{{resultNumber}}</p>
-            <p class="text">BMI</p>
+        <div class="image">
         </div>
 
-    </ion-col>
-    <ion-col size="12" class="col2">
+        <p class="name">{{resultText}}</p>
 
-      <div class="inputs">
-        
-        <ion-list class="line-input" mode="md"> 
-            <ion-item mode="md">
-              <ion-input class="ion-text-center" maxlength="3" minlength="3" [placeholder]="Height" [(ngModel)]="height" type="text"></ion-input>
-            </ion-item> 
-          </ion-list>
+          <div class="circle">
+              <p class="number">{{resultNumber}}</p>
+              <p class="text">BMI</p>
+          </div>
 
-          <ion-list class="line-input" mode="md"> 
+      </ion-col>
+      <ion-col size="12" class="col2">
+
+        <div class="inputs">
+
+          <ion-list class="line-input" mode="md">
               <ion-item mode="md">
-                <ion-input class="ion-text-center" maxlength="3" minlength="2" [placeholder]="Weight" [(ngModel)]="weight" type="text"></ion-input>
-              </ion-item> 
+                <ion-input class="ion-text-center" maxlength="3" minlength="3" [placeholder]="strings.ST136" [(ngModel)]="height" type="text"></ion-input>
+              </ion-item>
             </ion-list>
 
-            <ion-button mode="ios" (click)="bmiCalculate()" type="submit" color="dark" fill="solid" size="default" shape="round" expand="block">
-                Calculate
-            </ion-button>
+            <ion-list class="line-input" mode="md">
+                <ion-item mode="md">
+                  <ion-input class="ion-text-center" maxlength="3" minlength="2" [placeholder]="strings.ST137" [(ngModel)]="weight" type="text"></ion-input>
+                </ion-item>
+              </ion-list>
 
-            <p class="footertext">Calculate</p>
+              <ion-button mode="ios" (click)="bmiCalculate()" type="submit" color="dark" fill="solid" size="default" shape="round" expand="block">
+                  {{strings.ST138}}
+              </ion-button>
 
-        </div>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+              <p class="footertext">{{strings.ST139}}</p>
+
+          </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

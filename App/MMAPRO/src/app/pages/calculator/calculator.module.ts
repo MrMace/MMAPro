@@ -7,12 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { CalculatorPageRoutingModule } from './calculator-routing.module';
 
 import { CalculatorPage } from './calculator.page';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
     CalculatorPageRoutingModule
   ],
   declarations: [CalculatorPage]

@@ -7,12 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { TermsPageRoutingModule } from './terms-routing.module';
 
 import { TermsPage } from './terms.page';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
     TermsPageRoutingModule
   ],
   declarations: [TermsPage]

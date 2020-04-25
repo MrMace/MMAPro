@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { strings } from '../../config/strings';
+
 
 @Component({
   selector: 'app-workouts',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkoutsPage implements OnInit {
 
+  public strings = strings;
+
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

@@ -7,12 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { TpostsPageRoutingModule } from './tposts-routing.module';
 
 import { TpostsPage } from './tposts.page';
+import { PipesModule } from '../../pipes/pipes.module';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    PipesModule,
+    ComponentsModule,
     TpostsPageRoutingModule
   ],
   declarations: [TpostsPage]

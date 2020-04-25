@@ -7,12 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { EbodypartsPageRoutingModule } from './ebodyparts-routing.module';
 
 import { EbodypartsPage } from './ebodyparts.page';
+import { PipesModule } from '../../pipes/pipes.module';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    PipesModule,
+    ComponentsModule,
     EbodypartsPageRoutingModule
   ],
   declarations: [EbodypartsPage]

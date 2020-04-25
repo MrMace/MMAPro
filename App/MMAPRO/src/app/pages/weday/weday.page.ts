@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { strings } from '../../config/strings';
+import { ExercisesObject } from '../../interfaces/interfaces';
+import { DataService } from '../../services/data.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-weday',
@@ -7,9 +12,59 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WedayPage implements OnInit {
 
-  constructor() { }
+  public strings = strings;
+  exercises: ExercisesObject[] = [];
+  day: any;
+  isLoading = false;
+  id: any;
+  height: any;
 
-  ngOnInit() {
-  }
+
+  constructor(
+    private dataService: DataService,
+    private router: Router,
+    private route: ActivatedRoute,
+    public plt: Platform,
+
+    ) {}
+
+    ngOnInit() {
+    }
+
+    // tslint:disable-next-line: use-lifecycle-interface
+    ngOnDestroy() {
+    }
+
+    async ionViewWillEnter() {
+      this.isLoading = true;
+      this.route.params.subscribe(
+        data => {
+          this.id = data.id;
+          this.day = data.day;
+
+          this.getExercises();
+
+          if (!this.id) {
+            this.goBack();
+          }
+        }
+      );
+    }
+
+    goBack() {
+      this.router.navigate(['/home']);
+    }
+
+  getExercises() {
+
+    this.dataService.getDataWorkoutExercisesByDay(this.id, this.day)
+    .subscribe( resp => {
+
+      this.exercises = resp;
+
+      this.isLoading = false;
+
+  } );
+}
 
 }

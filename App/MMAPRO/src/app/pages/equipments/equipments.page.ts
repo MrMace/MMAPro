@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { strings } from '../../config/strings';
+import { EquipmentsObject } from '../../interfaces/interfaces';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-equipments',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EquipmentsPage implements OnInit {
 
-  constructor() { }
+  public strings = strings;
+  equipments: EquipmentsObject[] = [];
+  isLoading = false;
+
+  constructor(
+    private DataService: DataService
+    ) { }
 
   ngOnInit() {
+
+    this.isLoading = true;
+
+    this.DataService.getDataEquipments()
+    .subscribe( resp => {
+      this.equipments = resp;
+      this.isLoading = false;
+
+  } );
+
   }
 
 }

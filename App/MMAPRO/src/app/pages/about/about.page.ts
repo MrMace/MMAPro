@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { strings } from '../../config/strings';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutPage implements OnInit {
 
-  constructor() { }
+  public strings = strings;
+  aboutus: any;
+  isLoading = true;
+
+  constructor(private DataService: DataService) { }
 
   ngOnInit() {
+
+    this.isLoading = true;
+
+    this.DataService.getDataStrings()
+    .subscribe( resp => {
+      const data = resp[0];
+      this.aboutus = data.st_aboutus;
+      this.isLoading = false;
+
+  } );
+
   }
 
 }

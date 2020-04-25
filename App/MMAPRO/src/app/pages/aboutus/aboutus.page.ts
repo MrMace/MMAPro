@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { strings } from '../../config/strings';
+import { config } from '../../config/config';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-aboutus',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutusPage implements OnInit {
 
-  constructor() { }
+  public strings = strings;
+  public config = config;
+
+  constructor( private iab: InAppBrowser ) { }
 
   ngOnInit() {
+  }
+
+  openUrl(url) {
+    this.iab.create( url, '_system' );
   }
 
 }

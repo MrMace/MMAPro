@@ -7,12 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { MotivationPageRoutingModule } from './motivation-routing.module';
 
 import { MotivationPage } from './motivation.page';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
     MotivationPageRoutingModule
   ],
   declarations: [MotivationPage]
