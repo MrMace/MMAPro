@@ -1,0 +1,32 @@
+div{
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+    // background-color: #5d0f82;
+
+}
+
+h1{
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    // color:white;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+}
